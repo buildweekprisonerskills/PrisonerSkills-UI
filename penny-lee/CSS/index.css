@@ -174,7 +174,7 @@ header .navbar .logo img {
 }
 header .navbar .logo h1 {
   font-size: 3.5rem;
-  color: #d8d8d8;
+  color: #8d8d8d;
   padding: 0 5%;
 }
 header .navbar .nav-link {
@@ -184,13 +184,16 @@ header .navbar .nav-link {
 }
 header .navbar .nav-link a {
   font-size: 1.6rem;
-  color: #d8d8d8;
+  color: #8d8d8d;
   text-decoration: none;
   margin: 0 1%;
   padding: 1rem;
   border: 3px solid white;
 }
 header .navbar .nav-link a:hover {
+  border-bottom: 3px solid #0071CC;
+}
+header .navbar .nav-link .selected-link {
   border-bottom: 3px solid #0071CC;
 }
 header .navbar button {
@@ -200,7 +203,7 @@ header .navbar button {
   display: block;
   border-radius: 10px;
   font-size: 1.6rem;
-  width: 150px;
+  width: auto;
   text-align: center;
   padding: 0.8rem 2rem;
   cursor: pointer;
@@ -210,6 +213,7 @@ header .navbar button:hover {
   background: white;
   color: #0071CC;
   border: 2px solid #0071CC;
+  transition: all 0.3s ease;
 }
 .about {
   top: 60px;
@@ -254,6 +258,7 @@ header .navbar button:hover {
   background: #0071CC;
   color: white;
   border: 2px solid white;
+  transition: all 0.3s ease;
 }
 .about .image-container {
   width: 70vw;
@@ -269,22 +274,69 @@ header .navbar button:hover {
 }
 .top-images {
   width: 100%;
+  margin: 2rem 0;
   display: flex;
   justify-content: center;
 }
-.top-images img {
-  align-self: center;
-  /* or else will stretch images */
-  width: 30%;
+.top-images .top-images-container {
+  width: 28vw;
+}
+.top-images .top-images-container .top-images-overlay {
+  position: absolute;
+  z-index: -1;
+  color: #242323;
+  text-align: center;
+  width: 28vw;
+  opacity: 0;
+}
+.top-images .top-images-container .top-images-overlay p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 33% 12%;
+}
+.top-images .top-images-container img {
+  width: 100%;
   padding: 1%;
+  position: relative;
+  z-index: -2;
+}
+.top-images-container:hover .top-images-overlay {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+.top-images-container:hover img {
+  transition: all 0.3s ease;
+  opacity: 0.2;
 }
 .rationale {
   color: white;
-  text-align: center;
   background: #4988CD;
-  padding: 5%;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  margin: 2rem 0;
+}
+.rationale h2 {
+  padding: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.rationale ul {
+  list-style-position: outside;
+  padding: 0 10rem;
+}
+.rationale ul li {
+  padding: 1.8rem 0;
+  list-style-type: disc;
+}
+#features > h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 2rem;
 }
 .main-content {
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -317,14 +369,12 @@ header .navbar button:hover {
   margin-left: -1em;
   margin-right: 0.2em;
 }
-footer {
-  background: #d8d8d8;
-  color: #0071CC;
+.main-content .last-card {
+  width: 80%;
 }
 .about-team h2 {
   color: #0071CC;
   padding: 3rem 0;
-  cursor: pointer;
 }
 .about-team .team {
   display: flex;
@@ -340,6 +390,7 @@ footer {
   font-size: 3rem;
   padding: 2rem 0;
   overflow: hidden;
+  cursor: pointer;
 }
 .about-team .team .team-card .team-content {
   background: white;
@@ -391,4 +442,77 @@ footer {
 }
 .about-team .team .ui-design2 {
   background: #A5BBD4;
+}
+footer {
+  background: #6b6b6b;
+  color: #0071CC;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.footer-container h3 {
+  padding: 1.8rem 0;
+}
+.footer-container .footer-top {
+  display: flex;
+  justify-content: space-around;
+}
+.footer-container .footer-top .footer-connect a {
+  text-decoration: none;
+  color: white;
+  padding-right: 1.8rem;
+}
+.footer-container .footer-top .footer-connect a:hover {
+  color: #0071CC;
+}
+.footer-container .footer-top .footer-connect .fab {
+  font-size: 3rem;
+}
+.footer-container .footer-top .footer-subscribe {
+  width: 30%;
+}
+.footer-container .footer-top .footer-subscribe form {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+.footer-container .footer-top .footer-subscribe form input {
+  font-family: cursive;
+  font-size: 1.6rem;
+}
+.footer-container .footer-top .footer-subscribe form button {
+  background: #6b6b6b;
+  color: white;
+  border: 2px solid #6b6b6b;
+  border: 2px solid white;
+  display: block;
+  border-radius: 0;
+  font-size: 1.6rem;
+  width: auto;
+  text-align: center;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  outline: none;
+}
+.footer-container .footer-top .footer-subscribe form button:hover {
+  background: white;
+  color: #6b6b6b;
+  border: 2px solid #6b6b6b;
+  transition: all 0.3s ease;
+}
+.footer-container .footer-bottom {
+  text-align: center;
+}
+.footer-container .footer-bottom p {
+  font-size: 1.4rem;
+  padding: 3rem 0 1.6rem 0;
+}
+.footer-container .footer-bottom a {
+  text-decoration: none;
+  color: white;
+}
+.footer-container .footer-bottom a:hover {
+  color: #0071CC;
 }

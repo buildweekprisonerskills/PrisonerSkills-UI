@@ -50,33 +50,98 @@
 
 .top-images {
   width: 100%;
+  margin: 2rem 0;
   display: flex;
   justify-content: center;
 
-  img {
-    align-self: center; /* or else will stretch images */
-    width: 30%;
-    padding: 01%
+  .top-images-container {
+    width: 28vw;
+    
+    .top-images-overlay {
+      position: absolute;
+      //background: rgba(255, 255, 255, 0.3);
+      z-index: -1;
+      color: @main-color;
+      text-align: center;
+      width: 28vw;
+      opacity: 0;
+
+      p {
+        font-size: 1.8rem;
+        font-weight: bold;
+        padding: 33% 12%;
+      }
+    }
+    
+
+    img {
+      width: 100%;
+      //align-self: center; /* or else will stretch images */
+      padding: 1%;
+      position: relative;
+      z-index: -2;
+    }
   }
 }
 
+.top-images-container:hover .top-images-overlay {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.top-images-container:hover img {
+  transition: all 0.3s ease;
+  opacity: 0.2;
+}
+
+
+
+
 .rationale {
   color: white;
-  text-align: center;
   background: @main-blue3;
-  padding: 5%;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  margin: 2rem 0;
+
+  h2 {
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  ul {
+    list-style-position: outside;
+    padding: 0 10rem;
+
+    li {
+      padding: 1.8rem 0;
+      list-style-type: disc;
+    }
+  }
+
+
+}
+
+#features > h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem;
 }
 
 .main-content {
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   .content-cards {
     display: flex;
     margin: 0 10%;
     align-items: center;
-  
+
     img {
       display: block;
       width: 250px;
@@ -106,19 +171,20 @@
       }
     }
   }
+
+  .last-card {
+    width: 80%;
+  }
 }
 
-footer {
-  background: @footer-gray;
-  color: @main-blue7;
-}
+
 
 
 .about-team {
   h2 {
     color: @main-blue7;
     padding: 3rem 0;
-    cursor: pointer;
+
   }
   
   .team {
@@ -135,6 +201,7 @@ footer {
       font-size: 3rem;
       padding: 2rem 0;
       overflow: hidden;
+      cursor: pointer;
 
       .team-content {
         background: white;
@@ -202,6 +269,83 @@ footer {
 
     .ui-design2 {
       background: @main-blue6;
+    }
+  }
+}
+
+footer {
+  background: @footer-gray;
+  color: @main-blue7;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  h3 {
+    padding: 1.8rem 0;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-around;
+
+    .footer-connect {
+      a {
+        text-decoration: none;
+        color: white;
+        padding-right: 1.8rem;
+      }
+
+      a:hover {
+        color: @main-blue7;
+      }
+
+      .fab {
+        font-size: 3rem;
+      }
+    }
+
+    .footer-subscribe {
+      width: 30%;
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+
+        input {
+          font-family: cursive;
+          font-size: 1.6rem;
+        }
+
+        button {
+          .button-color(@footer-gray, white);
+          border: 2px solid white;
+          .button-style(@radius: 0, @btn-font-size: 1.6rem, @btn-width: auto);
+        }
+      }
+    }
+
+
+  }
+  
+  .footer-bottom {
+    text-align: center;
+
+    p {
+      font-size: 1.4rem;
+      padding: 3rem 0 1.6rem 0 ;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    a:hover {
+      color: @main-blue7;
     }
   }
 }

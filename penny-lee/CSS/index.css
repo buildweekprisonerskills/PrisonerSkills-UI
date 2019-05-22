@@ -321,3 +321,74 @@ footer {
   background: #d8d8d8;
   color: #0071CC;
 }
+.about-team h2 {
+  color: #0071CC;
+  padding: 3rem 0;
+  cursor: pointer;
+}
+.about-team .team {
+  display: flex;
+  flex-direction: column;
+}
+.about-team .team .team-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 3rem;
+  padding: 2rem 0;
+  overflow: hidden;
+}
+.about-team .team .team-card .team-content {
+  background: white;
+  border-radius: 15px;
+  margin: 2% 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-team .team .team-card .team-content img {
+  width: 30%;
+  padding: 1%;
+}
+.about-team .team .team-card .team-content .team-name {
+  width: 40%;
+}
+.about-team .team .team-card .team-content .team-name p {
+  color: #242323;
+  font-size: 3rem;
+  padding: 3rem;
+}
+.about-team .team .team-card .team-content .team-name a {
+  text-decoration: none;
+  color: #242323;
+}
+.about-team .team .team-card .team-content .team-name a:hover {
+  color: #0071CC;
+}
+.about-team .team .team-card .team-content .team-name .fab {
+  font-size: 5rem;
+}
+.about-team .team .team-card .team-hidden {
+  display: none;
+}
+.about-team .team .team-lead {
+  background: #0F69CC;
+}
+.about-team .team .front-end {
+  background: #2B77CB;
+}
+.about-team .team .back-end {
+  background: #4988CD;
+}
+.about-team .team .ux-design {
+  background: #7AA4D3;
+}
+.about-team .team .ui-design1 {
+  background: #9AB6D5;
+}
+.about-team .team .ui-design2 {
+  background: #A5BBD4;
+}

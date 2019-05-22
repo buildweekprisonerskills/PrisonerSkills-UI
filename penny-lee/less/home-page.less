@@ -8,6 +8,15 @@
   justify-content: space-between;
   align-items: flex-end;
 
+  @media @tablet {
+    height: 70vh;
+  }
+
+  @media @phone {
+    flex-direction: column;
+    height: 100vh;
+  }
+
   &-text {
     align-self: center;
     margin-left: 2%;
@@ -17,9 +26,23 @@
     justify-content: center;
     align-items: center;
 
+    @media @tablet {
+      align-self: flex-end;
+      margin-bottom: 5rem;
+    }
+
       h2 {
         font-size: 4rem;
         padding: 2rem 0;
+
+        @media @tablet {
+          font-size: 3.5rem;
+          padding: 1rem 0;
+        }
+
+        @media @phone {
+          padding: 2rem 1rem;
+        }
       }
 
       p {
@@ -30,6 +53,8 @@
       .button-color(white, @main-blue7);
       .button-style(@btn-width: 150px);
     }
+
+ 
   }
 
   .image-container {
@@ -54,8 +79,17 @@
   display: flex;
   justify-content: center;
 
+  @media @phone {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .top-images-container {
-    width: 28vw;
+    width: 29vw;
+
+    @media @phone {
+      width: 90%;
+    }
     
     .top-images-overlay {
       position: absolute;
@@ -63,13 +97,28 @@
       z-index: -1;
       color: @main-color;
       text-align: center;
-      width: 28vw;
+      width: 29vw;
       opacity: 0;
+
+      @media @phone {
+        width: 90%;
+      }
 
       p {
         font-size: 1.8rem;
         font-weight: bold;
-        padding: 33% 12%;
+        padding: 32% 13%;
+
+        @media @tablet {
+          font-size: 1.6rem;
+          padding: 27% 13%;
+        }
+
+        @media @phone {
+          font-size: 1.8rem;
+          font-weight: bold;
+          padding: 33% 20%;
+        }
       }
     }
     
@@ -115,6 +164,10 @@
     list-style-position: outside;
     padding: 0 10rem;
 
+    @media @phone {
+      padding: 0 5rem;
+    }
+
     li {
       padding: 1.8rem 0;
       list-style-type: disc;
@@ -142,10 +195,25 @@
     margin: 0 10%;
     align-items: center;
 
+    @media @tablet {
+      margin: 0;
+    }
+
+    @media @phone {
+      flex-direction: column;
+    }
+
     img {
       display: block;
       width: 250px;
+
+      @media @phone {
+        order: -1;
+        width: 70%;
+      }
     }
+
+
 
     .content-text {
       margin: 5%;
@@ -174,6 +242,10 @@
 
   .last-card {
     width: 80%;
+
+    @media @tablet {
+      width: 100%;
+    }
   }
 }
 
@@ -291,6 +363,10 @@ footer {
     display: flex;
     justify-content: space-around;
 
+    @media @tablet {
+      flex-wrap: wrap;
+    }
+
     .footer-connect {
       a {
         text-decoration: none;
@@ -309,6 +385,11 @@ footer {
 
     .footer-subscribe {
       width: 30%;
+
+      @media @tablet {
+        width: 80%;
+        margin: 2rem;
+      }
 
       form {
         display: flex;

@@ -8,14 +8,24 @@
 
     .features-box {
         .flexdisplay(row);
+        justify-content: space-between;
 
-        @media @mobile {
+        @media @mobile,
+        @tablet,
+        @tabletmini {
             .flexdisplay(column);
         }
 
         .features {
+            width     : 30%;
             text-align: center;
             padding   : 0 2rem 2rem 2rem;
+
+            @media @mobile,
+            @tablet,
+            @tabletmini {
+                width: 100%;
+            }
 
             .img-box {
                 padding-bottom: 2rem;
@@ -33,7 +43,9 @@
         padding-bottom: 2rem;
 
         // associated media queries
-        @media @mobile {
+        @media @mobile,
+        @tablet,
+        @tabletmini {
             .flexdisplay(column)
         }
 
@@ -43,8 +55,15 @@
             justify-content: space-between;
 
             // associated media queries
-            @media @mobile {
+            @media @mobile,
+            @tablet,
+            @tabletmini {
                 width: 100%;
+            }
+
+            i {
+                margin-bottom: 2rem;
+                color        : @theme-blue;
             }
 
             .story {
@@ -73,7 +92,9 @@
             justify-content: center;
 
             // associated media queries
-            @media @mobile {
+            @media @mobile,
+            @tablet,
+            @tabletmini {
                 width  : 100%;
                 padding: 2rem 0;
             }
@@ -95,7 +116,9 @@
         justify-content: space-between;
 
         // associated media queries
-        @media @mobile {
+        @media @mobile,
+        @tablet,
+        @tabletmini {
             .flexdisplay(column);
             flex-wrap  : nowrap;
             align-items: center;
@@ -109,7 +132,9 @@
             box-shadow      : 1rem 1rem 2rem fadeout(@silver, 50%);
 
             // associated media queries
-            @media @mobile {
+            @media @mobile,
+            @tablet,
+            @tabletmini {
                 width: 80%;
             }
 
@@ -126,12 +151,12 @@
             }
 
             h3 {
-                padding: 1.5rem;
+                padding   : 1.5rem;
                 text-align: center;
             }
 
             p {
-                padding: 1.5rem;
+                padding   : 1.5rem;
                 text-align: center;
             }
         }

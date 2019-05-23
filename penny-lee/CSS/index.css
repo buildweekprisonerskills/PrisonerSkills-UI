@@ -154,6 +154,16 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+.scroll-top {
+  display: none;
+  top: 50vh;
+  position: fixed;
+  right: 0;
+}
+.scroll-top .fas {
+  font-size: 3rem;
+  color: #0071CC;
+}
 header .navbar {
   position: fixed;
   top: 0;
@@ -244,6 +254,12 @@ header .navbar .nav-link button:hover {
 }
 header .navbar .nav-link .selected-link {
   border-bottom: 3px solid #0071CC;
+}
+@media screen and (max-width: 500px) {
+  header .navbar .nav-link .selected-link {
+    border-bottom: 3px solid #A5BBD4;
+    color: #8d8d8d;
+  }
 }
 @media screen and (max-width: 500px) {
   header .navbar .nav-link {
@@ -512,6 +528,9 @@ header .nav-scroll {
   .main-content .last-card {
     width: 100%;
   }
+}
+.about-team {
+  margin-top: 80px;
 }
 .about-team h2 {
   color: #0071CC;

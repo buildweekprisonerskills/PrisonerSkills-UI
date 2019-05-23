@@ -218,7 +218,17 @@ a {
 
 // define hidden class style
 .mobile-hidden {
-    @media @mobile {
+    @media @mobile, @tablet, @tabletmini {
         display: none;
     }
+}
+
+.scroll-a {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: @header-bg;
+    padding: 2rem 0rem;
+    transition: .2s ease-in-out;
 }

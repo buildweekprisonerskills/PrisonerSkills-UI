@@ -385,10 +385,19 @@ a {
 .btn-3:focus {
   outline: none;
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   .mobile-hidden {
     display: none;
   }
+}
+.scroll-a {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #17285D;
+  padding: 2rem 0rem;
+  transition: 0.2s ease-in-out;
 }
 header {
   background: #4e54c8;
@@ -454,6 +463,14 @@ header .right .headernav a {
 header .right .headernav a:hover {
   color: #f4b643;
 }
+header .right .fas {
+  display: none;
+}
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
+  header .right .fas {
+    display: block;
+  }
+}
 header .header-bottom {
   display: flex;
   flex-direction: row;
@@ -480,6 +497,7 @@ header .header-bottom .intro-text {
 @media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   header .header-bottom .intro-text {
     width: 80%;
+    margin-top: 2rem;
     text-align: center;
   }
   header .header-bottom .intro-text h2 {
@@ -503,28 +521,24 @@ header .menu-mobile {
   display: none;
 }
 header .menu-mobile .drawer-overlay {
-  background-color: #212529;
-  opacity: 0.7;
-  position: absolute;
-  z-index: 1;
+  background-color: rgba(33, 37, 41, 0.4);
+  position: fixed;
+  z-index: 999;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   height: 100%;
   width: 100%;
 }
 header .menu-mobile .mobile-nav {
   display: flex;
   flex-direction: column;
-  background-color: #212529;
-  opacity: 1;
-  position: absolute;
-  z-index: 1;
+  background-color: rgba(33, 37, 41, 0.4);
+  position: fixed;
+  z-index: 999;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   width: 100%;
   background-color: #17285D;
   height: 100%;
@@ -604,6 +618,28 @@ footer .footer .icons .fab:hover {
 footer a:hover {
   color: #f4b643;
 }
+.scroll-top {
+  line-height: 1.5;
+  font-size: 4rem;
+  font-weight: 600;
+  color: rgba(23, 40, 93, 0.1);
+  background-color: rgba(15, 105, 204, 0.1);
+  width: fit-content;
+  border-radius: 8rem;
+  padding: 0 1.25rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  border: none;
+  outline: none;
+}
+.scroll-top:hover {
+  cursor: pointer;
+  color: #17285D;
+  background-color: #0F69CC;
+  box-shadow: 0rem 0rem 0.5rem #f4b643;
+}
 .section-title {
   padding: 3rem 0rem;
   text-align: center;
@@ -614,16 +650,23 @@ footer a:hover {
 #features .features-box {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   #features .features-box {
     display: flex;
     flex-direction: column;
   }
 }
 #features .features-box .features {
+  width: 30%;
   text-align: center;
   padding: 0 2rem 2rem 2rem;
+}
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
+  #features .features-box .features {
+    width: 100%;
+  }
 }
 #features .features-box .features .img-box {
   padding-bottom: 2rem;
@@ -637,7 +680,7 @@ footer a:hover {
   flex-direction: row;
   padding-bottom: 2rem;
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   #howitworks .hiw-box {
     display: flex;
     flex-direction: column;
@@ -649,10 +692,14 @@ footer a:hover {
   width: 30%;
   justify-content: space-between;
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   #howitworks .hiw-box .story-box {
     width: 100%;
   }
+}
+#howitworks .hiw-box .story-box i {
+  margin-bottom: 2rem;
+  color: #0F69CC;
 }
 #howitworks .hiw-box .story-box .story {
   background-color: rgba(255, 255, 255, 0.5);
@@ -676,7 +723,7 @@ footer a:hover {
   padding: 0 2rem;
   justify-content: center;
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   #howitworks .hiw-box .mid-mockup {
     width: 100%;
     padding: 2rem 0;
@@ -695,7 +742,7 @@ footer a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   #team .team-box {
     display: flex;
     flex-direction: column;
@@ -710,7 +757,7 @@ footer a:hover {
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 1rem 1rem 2rem rgba(192, 192, 192, 0.5);
 }
-@media (max-width: 500px) {
+@media (max-width: 500px), (max-width: 800px), (max-width: 600px) {
   #team .team-box .team-member {
     width: 80%;
   }

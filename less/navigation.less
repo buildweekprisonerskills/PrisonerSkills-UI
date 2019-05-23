@@ -12,7 +12,6 @@ header {
         .flexdisplay(row);
         align-items    : center;
         justify-content: space-between;
-        // padding: 6rem 1.5rem 4rem 1.5rem;        
         padding-top    : 6rem;
         padding-bottom : 4rem;
 
@@ -28,9 +27,9 @@ header {
 
         .brief {
             .hstyles(3.8rem, 0px, 500);
-            background-color: @button-bg;
-            border-radius   : 1.5rem;
-            padding         : .5rem;
+            background-color   : @button-bg;
+            border-radius      : 1.5rem;
+            padding            : .5rem;
             // transform       : rotate(-45deg);
 
             &:hover {
@@ -62,6 +61,16 @@ header {
                 }
             }
         }
+
+        .fas {
+            display: none;
+
+            @media @mobile,
+            @tablet,
+            @tabletmini {
+                display: block;
+            }
+        }
     }
 
     .header-bottom {
@@ -70,7 +79,9 @@ header {
         justify-content: space-between;
 
         // associated media queries
-        @media @mobile, @tablet, @tabletmini {
+        @media @mobile,
+        @tablet,
+        @tabletmini {
             .flexdisplay(column);
         }
 
@@ -78,7 +89,9 @@ header {
             width: 55%;
 
             // associated media queries
-            @media @mobile, @tablet, @tabletmini {
+            @media @mobile,
+            @tablet,
+            @tabletmini {
                 width: 100%;
             }
         }
@@ -87,8 +100,11 @@ header {
             width: 40%;
 
             // associated media queries
-            @media @mobile, @tablet, @tabletmini  {
+            @media @mobile,
+            @tablet,
+            @tabletmini {
                 width     : 80%;
+                margin-top: 2rem;
                 text-align: center;
 
                 h2 {
@@ -99,13 +115,15 @@ header {
             .buttons {
                 .flexdisplay(row);
                 width          : 80%;
-                margin: 0 auto;
+                margin         : 0 auto;
                 align-items    : center;
                 justify-content: space-between;
 
                 // associated media queries
-                @media @mobile, @tablet, @tabletmini  {
-                    width          : 60%;
+                @media @mobile,
+                @tablet,
+                @tabletmini {
+                    width: 60%;
                 }
             }
         }
@@ -113,30 +131,34 @@ header {
 
     .menu-mobile {
         display: none;
+
         .drawer-overlay {
-            .overlay(0.7, 0, 0, 0, 0);
+            .overlay(0.7, 0, 0, 0);
         }
+
         .mobile-nav {
             .flexdisplay(column);
-            .overlay(1, 0, 0, 0, 0);
+            .overlay(1, 0, 0, 0);
             background-color: @theme-bg;
-            height: 100%;
-            width: 80%;
-            padding-left: 2rem;
-            justify-content: right;
+            height          : 100%;
+            width           : 80%;
+            padding-left    : 2rem;
+            justify-content : right;
         }
+
         nav {
             .flexdisplay(column);
             font-size: 3rem;
-            margin: 3rem 0 2rem 0;
+            margin   : 3rem 0 2rem 0;
 
             a {
                 padding: 1rem 0;
             }
         }
+
         .nav-btn {
             max-width: 90%;
-            margin: 0 auto;
+            margin   : 0 auto;
         }
     }
 }

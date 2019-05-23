@@ -7,7 +7,29 @@ const teambox = document.querySelector('.team-box');
 // ********************************************************************************************************************
 
 // define feature data
-const features = [{ src: "/img/icons/feature_1.png", alt: "feature-1", heading2: "Super Secured", paragraph: "Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque necpharetra id, tempor" }, { src: "/img/icons/feature_2.png", alt: "feature-2", heading2: "Detailed Analytics", paragraph: "Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque necpharetra id, tempor" }, { src: "/img/icons/feature_3.png", alt: "feature-3", heading2: "Community Oriented", paragraph: "Donec facilisis tortor ut augue lacinia, at viverra est semper. Sed sapien metus, scelerisque necpharetra id, tempor" },];
+const features = [{ src: "/img/icons/feature_1.png", alt: "feature-1", heading2: "Super Secured", paragraph: "All information is securely stored on our database. We understand the rights of the inmates and their personal information can only be accessed by the administration team." }, { src: "/img/icons/feature_2.png", alt: "feature-2", heading2: "Reliable", paragraph: "Information on facilities are extensively verified and inmates skills are updated in real time to provide a reliable experience for users and potential contractors." }, { src: "/img/icons/feature_3.png", alt: "feature-3", heading2: "User-friendly", paragraph: "Simplistic designs, clean dashboard and uncluttered interfaces make for easy navigation, posting by administrators, searching and recruiting by potential contractors." },];
 
 // get parent container
 const featuresbox = document.querySelector('.features-box');
+
+// get anchor tags
+const anchor_tag = Array.from(document.querySelectorAll('nav a'));
+
+// get scrolltop button
+const scroll_top = document.querySelector('.scroll-top');
+
+// get header wrapper and header top
+const header_wrapper = document.querySelector('.header-wrapper');
+const header_top = document.querySelector('.header-top');
+
+// get header bottom
+const header_bottom = document.querySelector('.header-bottom');
+
+// get mobile menu button
+const menu_btn = document.querySelector('.fas');
+
+// get mobile menu
+const menu = document.querySelector('.menu-mobile');
+
+// get overlay
+const overlay = document.querySelector('.drawer-overlay');

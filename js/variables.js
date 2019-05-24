@@ -13,7 +13,13 @@ const features = [{ src: "/img/icons/feature_1.png", alt: "feature-1", heading2:
 const featuresbox = document.querySelector('.features-box');
 
 // get anchor tags
-const anchor_tag = Array.from(document.querySelectorAll('nav a'));
+let anchor_tag = Array.from(document.querySelectorAll('nav a'));
+
+// Remove contact tags from anchor_tag array
+const tags = [4, 9];
+for (let i = tags.length - 1; i >= 0; i--) {
+    anchor_tag.splice(tags[i], 1);
+}
 
 // get scrolltop button
 const scroll_top = document.querySelector('.scroll-top');

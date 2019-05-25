@@ -1,6 +1,13 @@
+
+.about-background {
+  width: 100%;
+  position: relative;
+  z-index: -2;
+}
+
 .about {
   margin-top: 80px;
-  background: linear-gradient( rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2)), url("https://i.ibb.co/MCvbYh6/background.png");
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2)), url("https://i.ibb.co/MCvbYh6/background.png"); 
   background-position:center top;
   color: white;
   background-size: cover;
@@ -38,6 +45,7 @@
         font-size: 3rem;
         font-weight: bold;
         padding: 3rem 0;
+        line-height: 3.5rem;
 
         @media @tablet {
           font-size: cal(2.5rem+ 0.5vw);
@@ -55,7 +63,7 @@
 
     button {
       .button-color(white, @main-blue7);
-      .button-style(@btn-width: 150px);
+      .button-style(@btn-font-size: 1.8rem, @btn-width: 150px);
       margin: 2rem 0;
     }
 
@@ -107,17 +115,16 @@
       p {
         font-size: 1.8rem;
         font-weight: bold;
-        padding: 32% 13%;
+        padding: 27% 13%;
 
         @media @tablet {
           font-size: 1.6rem;
-          padding: 27% 13%;
         }
 
         @media @phone {
           font-size: 1.8rem;
           font-weight: bold;
-          padding: 33% 20%;
+          padding: 27% 20%;
         }
       }
     }

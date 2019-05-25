@@ -42,6 +42,8 @@ header {
     .fas {
       font-size: 3rem;
       color: @main-blue7;
+
+
     }
     
     .fa-bars {
@@ -50,7 +52,6 @@ header {
       @media only screen and (max-width: 620px) {
         display: block;
       }
-
     }
 
     .fa-times {
@@ -61,35 +62,6 @@ header {
       width: 70%;
       display: flex;
       justify-content: flex-end;
-      
-
-      a {
-        font-size: 2rem;
-        color: @nav-font-color;
-        text-decoration: none;
-        margin: 0 1%;
-        padding: 1rem;
-        border-bottom: 3px solid rgba(0, 0, 0, 0);
-
-        &:hover {
-          border-bottom: 3px solid @main-blue7; 
-        }
-      }
-
-      button {
-        margin-left: 1rem;
-        .button-color(@main-blue7, white);
-        .button-style( @btn-font-size: 1.8rem, @btn-width: auto);
-      }
-
-      .selected-link {
-        border-bottom: 3px solid @main-blue7; 
-
-        @media only screen and (max-width: 620px) {
-          border-bottom: 3px solid @main-blue6; 
-          color: @nav-font-color;
-        }
-      }
 
       @media only screen and (max-width: 620px) {
         transform: translateX(700px);
@@ -101,25 +73,62 @@ header {
         background:  @main-blue6;
         padding: 3rem 0;
         width: 100%;
+      }
+      
 
-        a {
+      :not(:last-child) {
+        font-size: 2rem;
+        color: @nav-font-color;
+        text-decoration: none;
+        margin: 0 1%;
+        padding: 1rem;
+        border-bottom: 3px solid rgba(0, 0, 0, 0);
+
+        @media only screen and (max-width: 620px) {
           color: white;
         }
 
-        a:hover {
+        &:hover {
+          border-bottom: 3px solid @main-blue7; 
+
+          @media only screen and (max-width: 620px) {
+
+            border-bottom: 3px solid @main-blue6; 
+            color: @nav-font-color;
+          }
+        }
+        
+      }
+  
+      :last-child {
+          text-decoration: none;
+          margin-left: 1rem;
+          .button-color(@main-blue7, white);
+          .button-style( @btn-font-size: 1.8rem, @btn-width: auto);
+
+          @media only screen and (max-width: 620px) {
+            margin-top: 1.8rem;
+          }
+      }
+      
+
+
+      .selected-link {
+        border-bottom: 3px solid @main-blue7; 
+
+        @media only screen and (max-width: 620px) {
           border-bottom: 3px solid @main-blue6; 
           color: @nav-font-color;
-        }
-        button {
-          margin-top: 1rem;
         }
       }
     }
   }
+
   .nav-scroll {
     box-shadow: 0 5px 5px -7px #333;
     padding: 0.6rem 0;
   } 
+
 }
 
 

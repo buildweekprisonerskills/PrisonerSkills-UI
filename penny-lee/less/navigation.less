@@ -1,0 +1,139 @@
+header {
+  .navbar {
+    position: fixed;
+    top: 0;
+    max-width: 1200px;
+    width: 100%;
+    z-index: 3;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 2rem 0;
+    transition: all 0.3s ease;
+
+    @media only screen and (max-width: 620px) {
+      height: 70px;
+      padding: 0.5rem;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      
+
+      #sitename-short {
+        font-size: 4.4rem;
+        background: white;
+        color: @main-blue7;
+        border-radius: 9px;
+        padding: 2px 5px 2px 2px;
+        letter-spacing: -3px;
+      }
+
+      #sitename-full {
+        font-size: 3.5rem;
+        color: @nav-font-color;
+        padding: 0 5%;
+      }
+    }
+
+    .fas {
+      font-size: 3rem;
+      color: @main-blue7;
+
+
+    }
+    
+    .fa-bars {
+      display: none;
+
+      @media only screen and (max-width: 620px) {
+        display: block;
+      }
+    }
+
+    .fa-times {
+      display: none;
+    }
+
+    .nav-link {
+      width: 70%;
+      display: flex;
+      justify-content: flex-end;
+
+      @media only screen and (max-width: 620px) {
+        transform: translateX(700px);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        align-items: flex-start;
+        background:  @main-blue6;
+        padding: 3rem 0;
+        width: 100%;
+      }
+      
+
+      :not(:last-child) {
+        font-size: 2rem;
+        color: @nav-font-color;
+        text-decoration: none;
+        margin: 0 1%;
+        padding: 1rem;
+        border-bottom: 3px solid rgba(0, 0, 0, 0);
+
+        @media only screen and (max-width: 620px) {
+          color: white;
+        }
+
+        &:hover {
+          border-bottom: 3px solid @main-blue7; 
+
+          @media only screen and (max-width: 620px) {
+
+            border-bottom: 3px solid @main-blue6; 
+            color: @nav-font-color;
+          }
+        }
+        
+      }
+  
+      :last-child {
+          text-decoration: none;
+          margin-left: 1rem;
+          .button-color(@main-blue7, white);
+          .button-style( @btn-font-size: 1.8rem, @btn-width: auto);
+
+          @media only screen and (max-width: 620px) {
+            margin-top: 1.8rem;
+          }
+      }
+      
+
+
+      .selected-link {
+        border-bottom: 3px solid @main-blue7; 
+
+        @media only screen and (max-width: 620px) {
+          border-bottom: 3px solid @main-blue6; 
+          color: @nav-font-color;
+        }
+      }
+    }
+  }
+
+  .nav-scroll {
+    box-shadow: 0 5px 5px -7px #333;
+    padding: 0.6rem 0;
+  } 
+
+}
+
+
+
+
+
+
+
